@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+     
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset = "utf-8" />
+      <title>FinancialEngineering</title>
+      <link rel = "icon" href = "title.PNG"  type = "image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style type="text/css">
+         /*about section*/
+         #about{
+         display: none;
+         }
+         .container1 {
+         position: relative;
+         width: 100%;
+         overflow: hidden;
+         padding-top: 56.25%; /* 16:9 Aspect Ratio */
+         }
+         .responsive-iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         border: none;
+         }
+         /* body division */
+         #body{
+         display: none;
+         }
+         /*header style*/
+         * {box-sizing: border-box;}
+         body {
+         margin: 0;
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         .topnav {
+         /*display: none;*/
+         overflow: hidden;
+         background-color: #e9e9e9;
+         }
+         .topnav a {
+         float: left;
+         display: block;
+         color: black;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         font-size: 17px;
+         }
+         .topnav a:hover {
+         background-color: #ddd;
+         color: black;
+         }
+         .topnav a.active {
+         background-color: #2196F3;
+         color: white;
+         }
+         .topnav .search-container {
+         float: right;
+         }
+         .topnav input[type=text] {
+         padding: 6px;
+         margin-top: 8px;
+         font-size: 17px;
+         border: none;
+         }
+         .topnav .search-container button {
+         float: right;
+         padding: 6px 10px;
+         margin-top: 8px;
+         margin-right: 16px;
+         background: #ddd;
+         font-size: 17px;
+         border: none;
+         cursor: pointer;
+         }
+         .topnav .search-container button:hover {
+         background: #ccc;
+         }
+         @media screen and (max-width: 600px) {
+         .topnav .search-container {
+         float: none;
+         }
+         .topnav a, .topnav input[type=text], .topnav .search-container button {
+         float: none;
+         display: block;
+         text-align: left;
+         width: 100%;
+         margin: 0;
+         padding: 14px;
+         }
+         .topnav input[type=text] {
+         border: 1px solid #ccc;  
+         }
+         }
+         /*        #circle {
+         width:120px;
+         height:120px;
+         border-radius:50%;
+         background-color:blue;
+         cursor:pointer;
+         margin:15px 0;
+         }
+         .h1{font: size 24px; 
+         text-align: center;
+         color: brown;
+         }
+         .square{
+         width:150px;
+         height:150px;
+         background-color:green;
+         margin-top:10px;
+         cursor:pointer;
+         margin:15px 0;
+         }
+         h2 {
+         color:#0000FF;
+         cursor:pointer;
+         margin:15px 0;
+         font-size:35px;
+         }
+         footer{
+         text-align: center;
+         background: #3ae224;
+         }
+         button {
+         font-size:24px;
+         cursor:pointer;
+         margin:15px 0;
+         }
+         #rstudio{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #equation{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         p {
+         /* display: none;*/
+         }/*
+         #heatequation
+         {
+         font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF; padding:15px;
+         background:#FCF8C5;
+         }
+         #interpolation{ font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF; padding:15px;
+         background:#FCF8C5;
+         }
+         #poission{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF; padding:15px;
+         background:#FCF8C5;
+         }
+         #poissionp{
+         display:none;
+         }
+         #matrix{ font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF; padding:15px;
+         background:#FCF8C5;
+         }
+         #bayes{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #black{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #limit{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #a {font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#3ae224;
+         padding:10px;
+         background:#f7f4d0;
+         float:left
+         }
+         #kelaniya {font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#3ae224;
+         padding:10px;
+         background:#f7f4d0;
+         float:left
+         }
+         #malaysia{font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#24ce0d;
+         padding:10px;
+         background:#ebeaf0;
+         float:left
+         }
+         hr{
+         display: none;
+         }
+         #nz {
+         font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#24ce0d;
+         padding:10px;
+         background:#ebeaf0;
+         float:left
+         }
+         #iit{font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#24ce0d;
+         padding:10px;
+         background:#ebeaf0;
+         float:left
+         }
+         #msc{font-size:15px;
+         cursor:pointer;
+         margin:10px 0;
+         color:#3ae224;
+         padding:10px;
+         background:#f7f4d0;
+         float:left
+         }
+         img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;}
+         #analysis{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #yahoo{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#36119a;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         /*footer*//*
+         .col_white_amrc { color:#FFF;}
+         footer { width:100%; background-color:#99abb5; min-height:250px; padding:10px 0px 25px 0px ;}
+         .pt2 { padding-top:40px ; margin-bottom:20px ;}
+         footer p { font-size:13px; color:rgb(255, 255, 255); padding-bottom:0px; margin-bottom:8px;}
+         .mb10 { padding-bottom:15px ;}
+         .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+         .footer_ul_amrc li {padding:0px 0px 5px 0px;}
+         .footer_ul_amrc li a{ color:#CCC;}
+         .footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+         .fleft { float:left;}
+         .padding-right { padding-right:10px; }
+         .footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+         .footer_ul2_amrc li p { display:table; }
+         .footer_ul2_amrc li a:hover { text-decoration:none;}
+         .footer_ul2_amrc li i { margin-top:5px;}
+         .bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+         .foote_bottom_ul_amrc {
+         list-style-type:none;
+         padding:0px;
+         display:table;
+         margin-top: 10px;
+         margin-right: auto;
+         margin-bottom: 10px;
+         margin-left: auto;
+         }
+         .foote_bottom_ul_amrc li { display:inline;}
+         .foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+         .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+         .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+         .social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+         .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+         /* Credit to https://bootsnipp.com/snippets/bxDBA *//*
+         #investing{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#36119a;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #markov{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #cal{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #Binomial{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #Bisection {font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #latex {font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #risk{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #laplace{font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }
+         #art {font-size:15px;
+         cursor:pointer;
+         margin:15px 0;
+         color:#0000FF;
+         padding:15px;
+         background:#FCF8C5;
+         }*/
+         /*loading animation style*/
+         @import url(http://fonts.googleapis.com/css?family=Play:400,700);
+         * {
+         box-sizing: border-box;
+         }
+         body {
+         background-color: rgb(236, 236, 235);
+         font-family: "Play";
+         }
+         h1 {
+         font-size: 2rem;
+         color: rgb(0, 0, 0);
+         text-align: center;
+         text-transform: uppercase;
+         }
+         .smart-glass {
+         position: absolute;
+         margin: auto;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         width: 288px;
+         height: 388px;
+         }
+         .logo {
+         width: 288px;
+         height: 288px;
+         position: relative;
+         }
+         *
+         * ==========================================
+         * CUSTOM UTIL CLASSES
+         * ==========================================
+         *
+         /*division home*/
+         .home{
+         /*display: none;*/
+         }
+         .navbar {
+         transition: all 0.4s;
+         }
+         .navbar .nav-link {
+         color: #fff;
+         }
+         .navbar .nav-link:hover,
+         .navbar .nav-link:focus {
+         color: #fff;
+         text-decoration: none;
+         }
+         .navbar .navbar-brand {
+         color: #fff;
+         }
+         /* Change navbar styling on scroll */
+         .navbar.active {
+         background: #fff;
+         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+         }
+         .navbar.active .nav-link {
+         color: #555;
+         }
+         .navbar.active .nav-link:hover,
+         .navbar.active .nav-link:focus {
+         color: #555;
+         text-decoration: none;
+         }
+         .navbar.active .navbar-brand {
+         color: #555;
+         }
+         a{
+         /* display: none;*/
+         }
+         /* Change navbar styling on small viewports */
+         @media (max-width: 991.98px) {
+         .navbar {
+         background: #fff;
+         }
+         .navbar .navbar-brand, .navbar .nav-link {
+         color: #555;
+         }
+         }
+         /*black-shcoles vs images explain*/
+         * {
+         box-sizing: border-box;
+         }
+         .column {
+         float: left;
+         width: 400px;
+         height: 400px;
+         padding: 5px;
+         }
+         /* Clearfix (clear floats) */
+         .row::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         /*
+         *
+         * ==========================================
+         * FOR DEMO PURPOSES
+         * ==========================================
+         *
+         */
+         .text-small {
+         font-size: 0.9rem !important;
+         }
+         body {
+         min-height: 110vh;
+         background-color: #4ca1af;
+         background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+         }
+         .circle {
+         padding: 20px;
+         border: 6px solid transparent;
+         border-top-color: #40A800;
+         border-radius: 50%;
+         width: 100%;
+         height: 100%;
+         animation: connect 2.5s linear infinite;
+         }
+         .xbox {
+         background: rgb(219, 13, 13);
+         width: 80px;
+         height: 80px;
+         border-radius: 100%;
+         overflow: hidden;
+         position: absolute;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         margin: auto;
+         }
+         .xbox:after, .xbox:before {
+         content: "";
+         display: block;
+         border-top: 10px solid #222;
+         border-radius: 50%;
+         height: 90%;
+         width: 120%;
+         transform: rotate(-45deg);
+         position: absolute;
+         right: -30%;
+         top: 15%;
+         }
+         .xbox:before {
+         left: -30%;
+         transform: rotate(45deg);
+         }
+         .loading-text {
+         text-transform: uppercase;
+         color: rgb(83, 23, 69);
+         text-align: center;
+         margin: 10px 0;
+         font-size: 1.4rem;
+         }
+         @keyframes connect {
+         0% {
+         transform: rotate(0deg);
+         }
+         100% {
+         transform: rotate(-360deg);
+         }
+         }
+         /*iframe{
+         padding: 100px;
+         }
+         .footer{
+         /*display: none;*/
+         }
+         /*search bar */
+         #myUL {
+         display: none;
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         }
+         #myUL li a {
+         border: 1px solid #ddd;
+         margin-top: -1px; /* Prevent double borders */
+         background-color: #f6f6f6;
+         padding: 12px;
+         text-decoration: none;
+         font-size: 18px;
+         color: black;
+         display: block
+         }
+         #myUL li a:hover:not(.header) {
+         background-color: #eee;
+         }
+         /*
+         .topictags{
+         /*display: none;
+         }*/
+         /*android settings
+         @media only screen and (min-width: 768px) {
+         .iframe{
+         display:none
+         }
+         }*/
+         /*scroll bar for search box*/
+         #myUL {
+         display: none;
+         overflow-y: scroll;
+         height: 120px;
+         width: 300px;
+         float: right;
+         margin: 10px 5px; padding: 5px;
+         text-align: justify;
+         }
+         #myUL::-webkit-scrollbar {
+         width:10px;
+         }
+         #myUL::-webkit-scrollbar-track {
+         -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+         border-radius:5px;
+         }
+         #myUL::-webkit-scrollbar-thumb {
+         border-radius:5px;
+         -webkit-box-shadow: inset 0 0 6px red; 
+         }
+         /*footer style*/
+         .site-footer
+         {
+         background-color:#fff;
+         padding:45px 0 20px;
+         font-size:15px;
+         line-height:24px;
+         color:#060606;
+         }
+         .site-footer hr
+         {
+         border-top-color:#bbb;
+         opacity:0.5
+         }
+         .site-footer hr.small
+         {
+         margin:20px 0
+         }
+         .site-footer h6
+         {
+         color:#060606;
+         font-size:16px;
+         text-transform:uppercase;
+         margin-top:5px;
+         letter-spacing:2px
+         }
+         .site-footer a
+         {
+         color:#47cf73;
+         }
+         .site-footer a:hover
+         {
+         color:#47cf73;
+         text-decoration:none;
+         }
+         .footer-links
+         {
+         padding-left:0;
+         list-style:none
+         }
+         .footer-links li
+         {
+         display:block
+         }
+         .footer-links a
+         {
+         color:#47cf73
+         }
+         .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+         {
+         color:#3366cc;
+         text-decoration:none;
+         }
+         .footer-links.inline li
+         {
+         display:inline-block
+         }
+         .site-footer .social-icons
+         {
+         text-align:right
+         }
+         .site-footer .social-icons a
+         {
+         width:40px;
+         height:40px;
+         line-height:40px;
+         margin-left:6px;
+         margin-right:0;
+         border-radius:100%;
+         background-color:#0ebeff
+         }
+         .copyright-text
+         {
+         margin:0
+         }
+         @media (max-width:991px)
+         {
+         .site-footer [class^=col-]
+         {
+         margin-bottom:30px
+         }
+         }
+         @media (max-width:767px)
+         {
+         .site-footer
+         {
+         padding-bottom:0
+         }
+         .site-footer .copyright-text,.site-footer .social-icons
+         {
+         text-align:center
+         }
+         }
+         .social-icons
+         {
+         padding-left:0;
+         margin-bottom:0;
+         list-style:none
+         }
+         .social-icons li
+         {
+         display:inline-block;
+         margin-bottom:4px
+         }
+         .social-icons li.title
+         {
+         margin-right:15px;
+         text-transform:uppercase;
+         color:#ffffff;
+         font-weight:700;
+         font-size:13px
+         }
+         .social-icons a{
+         background-color:#ffffff;
+         color:#ffffff;
+         font-size:16px;
+         display:inline-block;
+         line-height:44px;
+         width:44px;
+         height:44px;
+         text-align:center;
+         margin-right:8px;
+         border-radius:100%;
+         -webkit-transition:all .2s linear;
+         -o-transition:all .2s linear;
+         transition:all .2s linear
+         }
+         .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+         {
+         color:#fff;
+         background-color:#ffffff
+         }
+         .social-icons.size-sm a
+         {
+         line-height:34px;
+         height:34px;
+         width:34px;
+         font-size:14px
+         }
+         .social-icons a.facebook:hover
+         {
+         background-color:#3b5998
+         }
+         .social-icons a.twitter:hover
+         {
+         background-color:#00aced
+         }
+         .social-icons a.linkedin:hover
+         {
+         background-color:#007bb6
+         }
+         .social-icons a.dribbble:hover
+         {
+         background-color:#ea4c89
+         }
+         @media (max-width:767px)
+         {
+         .social-icons li.title
+         {
+         display:block;
+         margin-right:0;
+         font-weight:600
+         }
+         }
+
+
+
+
+
+
+
+
+
+         .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+      </style>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <!--loading animation-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <div class="smart-glass">
+         <h1>Financial Engineering.LK</h1>
+         <div class="logo">
+            <div class="circle">
+               <div class="circle">
+                  <div class="circle">
+                  </div>
+               </div>
+            </div>
+            <div class="hold-x">
+               <div class="xbox"></div>
+            </div>
+         </div>
+         <div class="loading-text">
+            Loading...
+         </div>
+      </div>
+      <div id="body">
+         <!--Header-->
+         <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a class="about" href="#about">About</a>
+            <a class="contact" href="#contact">Contact</a>
+            <a class="article" href="articles.html" target="_blank">Articles</a>
+            <a class="uokfe" href="fe.html" target="_blank">Uni. Kelaniya</a>
+            <div class="search-container">
+               <form action="#">
+                  <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+               </form>
+            </div>
+         </div>
+         <!--keyword list-->
+         <ul id="myUL">
+            <li><a href="#heatsection" class="sheat">Heat Equation</a></li>
+            <li><a href="#latexsection" class="latexs">Latex for Document</a></li>
+            <li><a href="#interpolation">Interpolation</a></li>
+            <li><a href="#matrix">Matrix</a></li>
+            <li><a href="#linearalgebra">Linear Algebra</a></li>
+            <li><a href="#bisection">Bisection Method</a></li>
+            <li><a href="#">Limit Theorem</a></li>
+
+
+            <li><a href="AEI.html">Equity Securities</a></li>
+            <li><a href="AEI.html">Equity Characteristics</a></li>
+          
+            <li><a href="AEI.html">Dividend-Based Valuation</a></li>
+            <li><a href="AEI.html">Free Cash Flow-Based Valuation</a></li>
+          
+            <li><a href="AEI.html">Discounted Cash Flow (DCF) Model</a></li>
+            <li><a href="AEI.html">Free Cash Flow to Equity (FCFE) Model</a></li>
+            <li><a href="AEI.html">Residual Income-Based Valuation</a></li>
+            <li><a href="AEI.html">Market Based Valuation</a></li>
+            <li><a href="AEI.html">Price-to-Earnings (P/E) ratio</a></li>
+            <li><a href="AEI.html">Price-to-Book (P/B) ratio</a></li>
+            <li><a href="AEI.html">Price-to-Sales (P/S) ratio</a></li>
+            <li><a href="AEI.html">Enterprise value to EBITDA</a></li>
+            <li><a href="AEI.html">Market Capitalization</a></li>
+            <li><a href="AEI.html">Asset Pricing Models</a></li>
+      
+            <li><a href="AEI.html">Capital Asset Pricing Model (CAPM)</a></li>
+            <li><a href="AEI.html">Arbitrage Pricing Theory (APT) Model</a></li>
+            <li><a href="AEI.html">Dividend Discount Model (DDM)</a>
+          </li>
+            <li><a href="AEI.html
+              ">Equity Valuation Process</a></li>
+            <li><a href="AEI.html">Sri Lankan Equity Market</a></li>
+            <li><a href="AEI.html">Global Market Indices</a></li>
+            <li><a href="AEI.html">Equity Valuation</a></li>
+            <li><a href="AEI.html">Technical Analysis</a></li>
+            <li><a href="AEI.html">Fundamental Analysis</a></li>
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </ul>
+         <div class="home">
+            <!--
+               <div class="topictags">
+               
+               <p id="p"><span id="poission">Poisson Destribution</span>
+                 <span id="rstudio" >  R Basics</span>
+                 <span id="bayes">Bayes' Theorem</span>
+                 <span id="limit">Limit Theorem</span>
+                 <span id="latex"> write in LaTeX </span><!--
+                 <span id="risk" > Cost theory </span>
+                 <span id="markov"> Markov chain</span><br>
+                 </p>-->
+            <!--
+               <p ><span id="heatequation">Heat Equation</span>
+               <span id="laplace">Laplace Transforms</span>
+               <span id="black">Black-Scholes for finance</span>
+               <span id="analysis">Excel data Analysis</span><br></p>
+               <p ><span id="interpolation">Linear interpolation</span> 
+                  <span id="equation">Differential Equation</span>
+                 <!-- <span id="investing">INVESTING.COM </span>-->
+            <!-- <span id="yahoo">Yahoo! finance </span>
+               <span id="cal">Financial calculators</span>
+               
+               
+               
+               
+               <!--
+               
+               <p ><span id="matrix"> Matrix and Arreys</span>
+               <span id="Binomial"> Binomial Destribution</span> 
+               <span id="Bisection"> Bisection method</span><br>
+               <!--<span id="markov"> Markov chain</span><a href="https://ift.world/booklets/portfolio-management-portfolio-risk-and-return-part-ii-part1/" target="blank" >
+               <span id="risk" > portfolio risk and return</span></a>
+               <a href="fe.html" target="blank" >
+               <span id="risk" > University Of Kelaniya</span></a>
+               <a href="fm.html" target="blank" >
+                 <span id="risk" > Financial Mathematics(M.Sc)</span></a>
+               
+               <a href="articles.html" target="blank" >
+               <span id="risk" > Article Section</span></a></p><br>
+               </p>-->
+
+
+               <div class="wrap">
+                  <button class="button" id="button" href="https://www.google.com">new</button>
+                </div>
+
+
+
+            <div id="heatsection" class="container">
+               <p class="h1">
+                  <br>Heat Equation
+               </p>
+               <br>
+               <p>
+                  The heat equation arises in the modeling of a number of phenomena and is often used in financial mathematics in the modeling of options. The Black–Scholes option pricing model's differential equation can be transformed into the heat equation allowing relatively easy solutions from a familiar body of mathematics. Many of the extensions to the simple option models do not have closed form solutions and thus must be solved numerically to obtain a modeled option price. 
+                  <br>
+                  <img width="360" height="300" src="https://mpng.subpng.com/20180530/yif/kisspng-heat-equation-laplace-s-equation-separation-of-var-5b0e446e4bc642.1005470915276616783104.jpg">
+                  <img width="360" height="300" src="https://miro.medium.com/max/629/1*mtb8OHeVcQQEw3bXMuF75g.png"><br>
+                  <br>
+            
+            <audio controls >
+               <source src="horse.ogg" type="audio/ogg">
+               <source src="horse.mp3" type="audio/mpeg">
+               Your browser does not support the audio element.
+            </audio></div>
+            <hr>
+            <div id="latexsection" class="container">
+               </p>
+               <p class="h1">
+                  Latex For Document
+               </p>
+               <br>
+               <P>
+                  LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents. LaTeX is available as free software.
+                  <br><br>LaTeX has a much steeper learning curve when compared with MS Word that is true. However, getting a basic LaTeX (text, figures, titles, tables) document is not so difficult.
+                  <br><br>
+                  <img src="https://data-mining.philippe-fournier-viger.com/wp-content/uploads/2017/02/latex.png" width="360" height="180">
+                  <br><br>Here is the link you need for this. It is below. You can go to it and set up a file you need.  It has a large number of templates. Choose the one you like.
+               </p>
+               <a href="https://www.overleaf.com/">Overleaf, Online LaTeX Editor</a><br>
+               </p>
+               <p>
+                  <img src="https://images.ctfassets.net/nrgyaltdicpt/1sP3nHmyKk24S42E4MGUki/10b22cccf2913ab646aa444196cad1f2/Sticker_wide_colour_green_bg.png" width="360" height="180">
+                  <br>
+                  <audio controls >
+                     <source src="horse.ogg" type="audio/ogg">
+                     <source src="horse.mp3" type="audio/mpeg">
+                     Your browser does not support the audio element.
+                  </audio>
+               </p>
+               <hr>
+               <div id="bisection" class="container">
+                  <p class="h1"> Bisection Method</p>
+                  <br><br>
+                  <p>Bisection method is a numerical root-finding algorthm that uses a divide and conquer approach to find the roots of a given function.It works bu repeatedly dividing the interval in which the root lies into two halves and then selecting the subinterval in which the root must lie.  The process is repeated untill the desired accuracy is achieved . The bisection method is one of the oldest and most reliable methods for finding the roots of a function.<br>
+                     1.The bisection method is a simple and robust numerical tecnique for finding the root of and equation.<br>
+                     2.It is easy to implement and requires minimal computational effort.<br> 
+                     3.It is guaranyeed to converge to te root of the equation, provided that the initial interval contains the root.<br>
+                     4.It is well suited for equation with miltiple roots, as it can be used to identify each root in turn.<br>
+                     5.It is also useful for solving equations with discontinuous derivatives.<br>
+                  </p>
+                  <br><br><img height="300px" width="360px" src="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/10RootFinding/bisection/bisection.gif"></img>
+                  <p>
+                     The bisection method is and iterative process for finding the rot of a function. The basic idea is to start with and interval[a,b ] that contains the root and then repeatedly bisect the interval until the desired accuracy is achieved.<br>The formula for the bisection method is as follows:<br>Let a and b be two points such that f(a) and f(b) have opposite signs.
+                     <br>
+                     Choose the midpoint c=(a +b)/2<br>If f(c) has the same sign as f(a) , set a=c and repeat the process.<br>If f(c) has the same sign as f(b) , set b=c and repeat the process.<br>Repeat the process untill the desired accuracy is achieved.<br>
+                  </p>
+               </div> <hr> <br> <br>
+               <div id="matrix" class="container">
+                  <P class="h1">Matrix  in finance Problems</P>
+                  <br><br>
+                  <p>In finance, a matrix can refer to a two-dimensional table of data that describes a financial relatiionship or set of data. For example, a matrix could be used to show the correlation between different stock prices, or to display the performance of a portfolio over time. Matrices are often used in finance to help visualize and analyze data, and they can be used to perform calculations and make predictions anout finacial trends.</p>
+                  <br>
+                  <p>
+                  <h4>Here is an example of a matrix in finance:
+                  </h4>
+                  </p>
+                  <br><br>
+                  <img>Suppose we have a portfolio with three stocks: Stock A , Stock B , Stock C . We want to see the returns on each stock over the past year. We could create a matrix to display this data, with the columns representing the different stocks and the rows representing the different months: <br><br> <br><img height="400px" width="360px" src="matrix.jfif" alt=""></img><br><br>
+                  In this example , the matrix shows the monthly returns for each stock over the past year. We can use this data to analyze the performance of the portfolio and make informed decisions about investment strategy. <br>
+                  <br><br><br> The dimensions of a matrix refer to the number of rows and columns it has. For example , this matrix with 12 rows and 3 columns  is sai to be a "12 *4  matrix" .The number of rows is typically listed first , followed by the number of columns. <br><br>A matrix with a sigle row is called a row matrix , and a matrix with a single column is called a column matrix . A matrix with the same number of rows and columns is called a square matrix. <br><br>
+                  <b>BCG Matrix</b> <br> <br> The BCG Matrix is use by businesses to anlyze thier product portfolio and determine which products should recieve more investment and which should be phased out . It helps businesses identify which products are most profitable and which are not, so they can make informed decisions about where to allocate resources . The matrix also helps businesses identify potentioal opportunities for growth and new markets to enter. <br>
+                  BCG Matrix is a tool used by businesses to analyze their product portfolio and determine which products shold receive more investment and which should be phase out . It is based on the Boston Consulting Group's growth=shae matrix , which plots a scompany's products on a graph based on their relative market share and market growth rate. <br> The BCG matrix consists of four quadrants:
+                  <br><br> 1  . Stars : These are products with high market share in a rapidly growing market . They require heavy investment to maintain their position. <br> 2 . Cash Cows : These are products with high market share in a slow - growing market . They generate a lot of cash but require little investment. <br>3  . Question Marks: These are products with low market share ina rapidly growing market . They require heavy investment to gain market share. <br> 4 . Dogs : These are products with low market share in a slow-growing market . They generate little cash and require little investment. <br>
+                   <img width="360" height="300"  src="https://96f94984f74e6e3eb0a4-e3e7ae96ad05e49a23416f8e32962ed8.ssl.cf1.rackcdn.com/2021/08/20183336_BCG-Growth-%E2%80%93-Share-Matrix_SMStudy.jpg">
+                  <img width="360" height="300"  src="https://images.edrawmax.com/article/bcg-matrix/apple-bcg-matrix-analysis.png">
+                  <br><br>
+               
+               
+               
+               </P>
+               </div> <hr>
+               <div id="interpolation" class="container">
+                  <p class="h1">Quardratic Equation Interpolation and Cubic Equation Interpolation</p>
+                  <br><br>
+                  <img width="360" height="300"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Interpolation_example_linear.svg/230px-Interpolation_example_linear.svg.png">
+                  <img width="360" height="300"   src="https://www.investopedia.com/thmb/niXcroBmVyst0rV40KoB_Jz7yCQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Interpolation_example_polynomia-17f3432d98424155a2923472c95ae75f.png"><br>
+                  <br><br>
+                  <p>
+                     Interpolation is a mathematicla thechniqye used to estimate values between two known points. It is often use to approximate the value of function at intermediate points , such as when graphing a curve.
+                     <br>interpolation is important because it allows us to estimate values between two known points. This can be useful in a variety of applications , such as predicting the value of function at intermeiate points when graphing a curve. Quardratic equation are important because they are important because they are used to model many real-world phenomena.
+                     <br>Interpolation methods are mathematical techniques used to estimate values beween two known points. Common interpolation methods include <br>
+                     <br><br>Linear interpolation <br> Polynomial interpolation <br>Spline interpolation <br> <br> Linear interpolation is the simplest method and involves connecting two points with a straight line. Polynomials to approximate the function between two points. Spline interpolation uses a series of polynomials to fit a smooth curve between two points. <br>
+                     Interpolation is use to estimate values between two known points. This can be usedful in a variety of applications, such as preicting the value of function at intermediate points when graphing a curve. It can also be used to fill in missing data points in a dataset or to make predictions about future values. Interpolation can also be used to smooth out nosy data and make it easier to analyze.
+                  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               </div> <br><br> <hr>
+               <div id="linearalgebra" class="container">
+                    <p  class="h1">Linear Algebra</p> <br>
+                    <p>Linear algebra is a branch of mathematics that deals with linear equation and linear transformars. It is a fundamental mathematical toolkit for analyzing and manipulating linear  system in economics. Some of the key concepts in linear algebra include vectors , matrices , linear transformations , and eigenvalues and eigenvectors .</p> <br><br>
+                    <p>Linear algebra is a  very important branch of mathematics with numerous applications in a wide variety of fields. Some of the key ways in which linear algebra is used inclue:
+                     <br>
+                     1 .  Solving systems of linear equation: Linear algebra provides tools and techniques for solving systems of linear equatios, which are equatios of the form Ax=b , where A is a matrix of coefficiens and x and b are vectors. <br>
+                     <br> 2  . Data representation and manipulation and manipulating data in finacial field. <br><br>
+                    3  .  Optimization : Linear algebra is used in many optimization problems , including linear programming and least squares problems. <br><br>
+                      4 . Eigenvalues and eigenvectors: Eigenvalues and eigenvectors are important concepts in linear algebra that are used in many areas , including stability analysis , Google's PageRank algorithm , and pricipal component analysis (PCA). <br><br>
+                      <b>Overall , linear algebra is  a very useful tool for understanding and anlyzing linear systems , and it is an essential part of the mathematical toolkit of many engineers.</b>
+                     <br><br>
+                     Linear algebra has many applications in finance. Some of the ways in which linear algebra is used in finance include: <br><br>
+                     1 . Portfolio optimization : Linear algebra is used to optimize portfolios by selecting the best combination of assets to maximize returns or minimize risk. <br><br>
+                     2 . Risk management : Linear algebra is used to model and anlyze risk in finacial markets , including the use of value at risk (VaR ) and other risk measures. <br><br>
+                     3 . Derivative pricing : Many financial derivatives , such as options and futures , can be priced using techniques from linear algebra , such as the Black -Scholes model. <br><br>
+                     4 . Finacial time series analyssis : Linear algebra is used to analyze finacial time series data , such as stock prices or exchenge rates , to identify trends and patterns. <br> <br>
+                      
+
+                     <br>
+                  <img width="360" height="300"  src="https://media5.datahacker.rs/2020/03/Picture36-1-1024x949.jpg">
+                  <img width="360" height="300"   src="https://miro.medium.com/max/1400/1*v-aCXU82Hc9jXCnrge_FqQ.png"><br>
+                  <br><br>
+                   </p>
+
+               </div>
+            </div>
+         </div>
+         <div id="about">
+            <div class="container1"> 
+               <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Y50yDxDhVPE"></iframe>
+            </div>
+         </div>
+         <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!------ Include the above in your HEAD tag ---------->
+         <!--
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+            -->
+         <!--footer starts from here
+            <footer class="footer">
+            <div class="container bottom_border">
+            <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+            <!--headin5_amrc
+            <p class="mb10">We are following financial engineering field.we want to expand this area to futher development ,providing accurate information to enthusiastic Beginners...</p>
+            <p><i class="fa fa-location-arrow"></i> 20900,Kandy,Central,Srilanka </p>
+            <p><i class="fa fa-phone"></i> <a href=" tel:+94-771785425"> +94-771785425</a> </p>
+            </p>
+            <p><i class="fa fa fa-envelope"></i> Nuwan@financiengineering.lk  </p>
+            
+            
+            </div>
+            
+            
+            <div class=" col-sm-4 col-md  col-6 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+            <!--headin5_amrc
+            <ul class="footer_ul_amrc">
+            <li><a href="https://www.cse.lk/" target="blank">CSE - Colombo Stock Exchange</a></li>
+            <li><a href="https://www.cbsl.gov.lk/" target="blank">Central Bank of Sri Lanka</a></li>
+            <li><a href="https://www.canva.com/"  target="blank">canva online design </a></li>
+            <li><a href="https://www.investing.com/" target="blank">INVESTING.COM </a></li>
+            
+            <li><a href="https://finance.yahoo.com/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALY118RuUpsTclCi-b_aqo5WFi3iYpPFlI_rXgyvc5f0NNo-4Y1JSkBsjWI4rWpOikHbTYh1nY9jYgedf5OyVxr7jvooqVjr4B4kXXayhWeOg-XIyO7V7fkqXEctA7Jne4Zc_-bYM3ZTojvMoG4CBsUbDjTi0a_jw3HKme7xJAeZ" target="blank">Yahoo Finance </a></li>
+            </ul>
+            <!--footer_ul_amrc ends here
+            
+            
+            
+            
+            
+            </div>
+            </div>
+            <!--
+            
+            <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+            <li><a href="http://webenlance.com">Home</a></li>
+            <li><a href="http://webenlance.com">About</a></li>
+            <li><a href="http://webenlance.com">Blog</a></li>
+            <li><a href="http://webenlance.com">Contact</a></li>
+            </ul>-->
+         <!--foote_bottom_ul_amrc ends here
+            <p class="text-center">Copyright @2022 | Designed With by <a href="#">Your company</a></p>
+            
+            <ul class="social_footer_ul">
+            <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here
+            </div>
+            
+            </footer>-->
+         <!-- Site footer -->
+         <footer class="site-footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                     <h6>About</h6>
+                     <p class="text-justify">Financial Engineering.lk <i>mathematical finance and computational finance </i> We are following financial engineering field.we want to expand this area to futher development ,providing accurate information to enthusiastic Beginners....</p>
+                     <p><i class="fa fa-location-arrow"></i> 20900,Kandy,Central,Srilanka </p>
+                     <p><i  class="fa fa-phone"></i><a href=" tel:+94-771785425"> +94-771785425</a> </p>
+                     <p><i class="fa fa fa-envelope"></i> Nuwan@financialengineering.lk  </p>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                     <h6>Categories</h6>
+                     <ul class="footer-links">
+                        <li><a href="">C</a></li>
+                        <li><a href="">SPSS</a></li>
+                        <li><a href="">R studio</a></li>
+                        <li><a href="">Matlab</a></li>
+                        <li><a href="">Latex</a></li>
+                        <li><a href="">Templates</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                     <h6>Quick Links</h6>
+                     <ul class="footer-links">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Contribute</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Sitemap</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <hr>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 col-sm-6 col-xs-12">
+                     <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+                        <a href="#">Financialengineering.lk</a>.
+                     </p>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script type="text/javascript">
+         /*search engine*/
+         
+         function myFunction() {
+             var input, filter, ul, li, a, i, txtValue;
+             input = document.getElementById("myInput");
+             filter = input.value.toUpperCase();
+             ul = document.getElementById("myUL");
+             li = ul.getElementsByTagName("li");
+             for (i = 0; i < li.length; i++) {
+                 a = li[i].getElementsByTagName("a")[0];
+                 txtValue = a.textContent || a.innerText;
+                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                     li[i].style.display = "";
+                 } else {
+                     li[i].style.display = "none";
+                 }
+             }
+         }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         /*scroll bar*/
+         
+         $(function () {
+             $(window).on('scroll', function () {
+                 if ( $(window).scrollTop() > 10 ) {
+                     $('.navbar').addClass('active');
+                 } else {
+                     $('.navbar').removeClass('active');
+                 }
+             });
+         });
+         
+         
+         
+        
+         
+         /*loading animation stop*/
+         
+         
+         
+         $("body").hover(function(){ $('.smart-glass').fadeOut(); 
+         $('body').css('background', 'transparent');
+         
+          }, 500);
+         
+          setInterval(function(){ $('.smart-glass').fadeOut(); 
+         $('body').css('background', 'transparent');
+         
+          }, 5000);
+          
+         
+          setInterval(function(){ $('#body').fadeIn(); 
+         $('body').css('background', 'transparent');
+         
+          }, 5000);
+          
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+          
+          /*show first page*/
+          
+         $("body").hover(function(){$("#body").fadeIn(500)});
+          
+          
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         /*search results show*/
+         
+         
+         $("#myUL").mouseleave(function(){
+           $("#myUL").fadeOut(150);
+           });
+         
+         
+         
+         
+         
+          $("input").hover(function(){
+             $("#myUL").fadeIn(10);
+           });
+         
+         
+         
+          $("input").click(function(){
+             $(".home").fadeIn(10);
+           });
+         
+         
+         
+               /*about section*/
+         
+         
+               $(".about").click(function(){
+           $(".home").fadeOut(150);
+           });
+           $(".about").click(function(){
+           $("#about").fadeIn(150);
+           });
+               
+              
+         
+           /*home section*/
+         
+         
+           $(".active").click(function(){
+           $("#about").fadeOut(150);
+           });
+           $(".active").click(function(){
+           $(".home").fadeIn(150);
+           });
+           
+         
+         
+            /*contact section*/
+             
+         
+              
+            $(".contact").click(function(){
+           $("#about").fadeOut(150);
+           });
+           $(".contact").click(function(){
+           $(".home").fadeOut(150);
+           });
+         
+         
+         
+         
+           
+            
+            
+          
+          
+             
+            const b1 = document.getElementById("button");
+            b1.onclick = function () {
+            window.location ="https://www.financialengineering.lk/bm/";
+            };
+         
+         
+         
+         
+         
+         //click and change flag
+  
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+         
+          
+          /*$("body").hover(function(){
+               $("p").fadeIn(1000);
+             });*/
+         
+          
+          
+          /*$("body").hover(function(){
+             $("p").fadeIn(1000);
+           });
+          
+          
+           
+         
+          
+           $(".about").click(function(){
+           $(".home").fadeOut(150),$("iframe").fadeIn(300);
+           });
+         $(".topnav"),$("#myUL").mouseleave(function(){
+           $("#myUL").fadeOut(150);
+           });
+          $("input").hover(function(){
+             $("#myUL").fadeIn(10);
+           });
+         
+           $("body").hover(function(){
+             $(".home").fadeIn(500);
+            
+           });
+         
+          /* $(".active").click(function(){
+             $(".topictags"),$("#heatsection"),$("#latexsection").fadeToggle(50);
+            
+           }); 
+         */
+         /*
+           $("body").hover(function(){
+             $(".topnav").fadeIn(1000);
+           });
+           $("body").hover(function(){
+             $("a").fadeIn(1000);
+           });
+           $("body").hover(function(){
+             $("hr").fadeIn(1000);
+           });
+         
+         
+         
+           $("body").hover(function(){
+             $("br").fadeIn(1000);
+           });
+         
+           $("body").hover(function(){
+             $("img").fadeIn(1000);
+           });
+           $("body").hover(function(){
+             $("h1").fadeIn(1000);
+           });
+         
+           $("body").hover(function(){
+             $("footer").fadeIn(1000);
+           });
+         
+           $("body").cuarse(function(){
+             $("body").fadeIn(2000);
+           });
+           $("body").hover(function(){
+             $("body").fadeIn(2000);
+           });
+          
+           $("body").hover(function(){
+             $(".smart-glass").fadeOut(500);
+           });
+         
+         
+          
+          $("#circle").click(function(){
+             $("#circle").css("background-color","red");
+           });
+         
+         
+         
+           $("div").click(function(){
+           $("div").css("display","none");
+         });
+         */
+           /*
+         
+           $(".square").hover(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/gJJ1gM-HFEk" );
+           });
+         
+         $("div").click(function(){
+           $("div").css("display","none");
+         });
+         
+         
+             $("#matrix").click(function(){
+         $("iframe").attr("src","https://www.mathworks.com/help/matlab/learn_matlab/matrices-and-arrays.html" );
+             });
+         
+             $("#equation").click(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/5LkQEOPwqfk" );
+          
+         
+         
+         });
+         $("#cal").click(function(){
+         $("iframe").attr("src","https://www.calculator.net/finance-calculator.html" );
+          
+         
+         
+         });
+         
+         
+         $("#iit").click(function(){
+         $("iframe").attr("src","http://www.iitkgp.ac.in/financial-engineering" );
+          
+         
+         
+         });
+         $("#Binomial").click(function(){
+         $("iframe").attr("src","https://www.sjsu.edu/people/saul.cohn/courses/stats/s0/BinomialProbabTable.pdf" );
+          
+         
+         
+         });
+         $("#malaysia").click(function(){
+         $("iframe").attr("src","https://www.mmu.edu.my/programmes-by-faculty-all/programmes-by-faculty-fom/bachelor-of-financial-engineering-hons/" );
+          
+         
+         
+         });
+         
+         $("#markov").click(function(){
+         $("iframe").attr("src","https://www.probabilitycourse.com/chapter11/11_2_7_solved_probs.php" );
+          
+         
+         
+         });
+         
+         
+         
+         
+         $("#msc").click(function(){
+         $("iframe").attr("src","https://science.cmb.ac.lk/academic/postgraduate-programs/msc-pg-dip-programs/msc-in-financial-mathematics/" );
+          
+         
+         
+         });
+         
+           $("#heatequation").click(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/ly4S0oi3Yz8" );
+          
+         
+         
+         });
+         
+         $("#investing").click(function(){
+         $("iframe").attr("src","https://www.google.com/search?igu=1&ei=&q=Investing.com+historical+data"  );
+          
+         
+         
+         });
+         
+         
+         
+         
+         
+         $("#analysis").click(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/bEvWsb_018o"  );
+          
+         
+         
+         });
+         $("#kelaniya").click(function(){
+         $("iframe").attr("src","https://fcms.kln.ac.lk/dep/dfin/index.php/academic/courses/undergraduate-programmes/bbmgtfinancial-engineeringhonours" );
+          
+         
+         
+         });
+         $("#nz").click(function(){
+         $("iframe").attr("src","https://www.canterbury.ac.nz/study/qualifications-and-courses/masters-degrees/master-of-financial-engineering/" );
+          
+         
+         
+         });
+         
+         
+         
+         $("#rstudio").click(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/_V8eKsto3Ug" );
+          
+         
+         
+         });
+         $("#black").click(function(){
+         $("iframe").attr("src","https://www.youtube.com/embed/pr-u4LCFYEY"   );
+          
+         
+         
+         });
+         $("#yahoo").click(function(){
+         $("iframe").attr("src","https://www.google.com/search?igu=1&ei=&q=Yahoo+finance"   );
+          
+         
+         
+         });
+         
+         
+         
+         $("#interpolation").click(function(){
+         $("iframe").attr("src","https://www.toppr.com/guides/maths-formulas/linear-interpolation-formula/"  );
+          
+         
+         
+         });
+         
+         $("#Bisection").click(function(){
+         $("iframe").attr("src","https://atozmath.com/example/CONM/Bisection.aspx?he=e&q=bi"  );
+          
+         
+         
+         });
+         
+         
+         
+         
+         $("#poission").click(function(){
+         $("iframe").attr("src","https://www.math.uh.edu/~dlabate/poisson_cdf.pdf"  );
+          
+         
+         
+         });
+         $("#a").click(function(){
+         $("iframe").attr("src","https://science.cmb.ac.lk/academic/undergraduate-programs/external-degrees/bsc-external-in-financial-engineering/"  );
+          
+         
+         
+         });
+         $("#bayes").click(function(){
+         $("iframe").attr("src","https://www.mathsisfun.com/data/bayes-theorem.html"  );
+          
+         
+         
+         });
+         
+         $("#limit").click(function(){
+         $("iframe").attr("src","https://math.libretexts.org/Bookshelves/Analysis/Introduction_to_Mathematical_Analysis_I_(Lafferriere_Lafferriere_and_Nguyen)/03%3A_Limits_and_Continuity/3.02%3A_Limit_Theorems"  );
+          
+         
+         
+         });
+         $("#latex").click(function(){
+         $("iframe").attr("src","https://www.google.com/search?igu=1&ei=&q=overleaf"  );
+          
+         
+         
+         });
+         
+         
+         
+         $("#laplace").click(function(){
+         $("iframe").attr("src","https://tutorial.math.lamar.edu/classes/de/laplacetransforms.aspx"  );
+          
+         
+         
+         });
+         
+         */
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+      </script>
+   </body>
+</html>
